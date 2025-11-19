@@ -1,72 +1,44 @@
 # 🚀 Guía de Inicio Rápido - Notorios CRM
 
-## ⚡ Opción 1: Scripts Automáticos (Más Fácil)
+## ⚡ Inicio Rápido (Un Solo Comando)
 
-### Paso 1: Verificar e instalar dependencias
+### Paso 1: Instalar concurrently (solo la primera vez)
 
 ```bash
 cd /Users/sam/Desktop/mini-crm
-./start.sh
+npm install
 ```
 
-Este script verifica que todo esté instalado correctamente.
+### Paso 2: Correr TODO con un solo comando
 
-### Paso 2: Iniciar Backend (Terminal 1)
+```bash
+npm run dev
+```
 
+✅ Esto iniciará automáticamente:
+- **Backend** en http://localhost:3011
+- **Frontend** en http://localhost:3010
+
+Verás los logs de ambos servidores en la misma terminal con colores:
+- 🔵 BACKEND (cyan)
+- 🟣 FRONTEND (magenta)
+
+---
+
+## 📝 Opción Alternativa: Terminales Separadas
+
+Si prefieres ver los logs por separado:
+
+### Terminal 1 - Backend
 ```bash
 cd /Users/sam/Desktop/mini-crm
 npm run backend
 ```
 
-✅ El backend correrá en: **http://localhost:3011**
-
-### Paso 3: Iniciar Frontend (Terminal 2 - NUEVA)
-
-Abre **otra terminal** y ejecuta:
-
+### Terminal 2 - Frontend (nueva terminal)
 ```bash
 cd /Users/sam/Desktop/mini-crm
 npm run frontend
-```
-
-✅ El frontend correrá en: **http://localhost:3010**
-
----
-
-## 📝 Opción 2: Manual (Paso a Paso)
-
-### Terminal 1 - Backend
-
-```bash
-cd /Users/sam/Desktop/mini-crm/backend
-npm install          # Solo la primera vez
-npm run dev          # Inicia el servidor
-```
-
-Deberías ver:
-```
-╔═══════════════════════════════════════════╗
-║   🚀 Notorios CRM Backend                ║
-║   Server: http://localhost:3011          ║
-║   Status: ✓ Running                      ║
-╚═══════════════════════════════════════════╝
-✓ Database connected
-✓ Database tables initialized
-```
-
-### Terminal 2 - Frontend (NUEVA TERMINAL)
-
-```bash
-cd /Users/sam/Desktop/mini-crm/frontend
-npm install          # Solo la primera vez
-npm run dev          # Inicia el servidor
-```
-
-Deberías ver:
-```
-  VITE v5.0.11  ready in 500 ms
-
-  ➜  Local:   http://localhost:3010/
 ```
 
 ---
@@ -82,7 +54,7 @@ Prueba el funnel completo:
 3. Ve el video
 4. Llega a la página de agradecimiento
 
-### Panel de Administración
+### Panel de Administración (CRM)
 👉 **http://localhost:3010/admin/login**
 
 **Credenciales por defecto:**
@@ -105,54 +77,35 @@ Prueba el funnel completo:
 
 ## 🛠️ Comandos Útiles
 
-### Desde la raíz del proyecto:
-
 ```bash
+# Correr todo (backend + frontend) en una terminal
+npm run dev
+
 # Instalar todas las dependencias
+npm install
 npm run install:all
 
-# Iniciar backend
+# Solo backend
 npm run backend
 
-# Iniciar frontend
+# Solo frontend
 npm run frontend
 
 # Construir para producción
 npm run build
 ```
 
-### Comandos individuales:
-
-```bash
-# Backend
-cd backend
-npm run dev          # Modo desarrollo
-npm run build        # Construir
-npm start            # Producción
-
-# Frontend
-cd frontend
-npm run dev          # Modo desarrollo
-npm run build        # Construir
-npm run preview      # Preview de producción
-```
-
 ---
 
 ## ❓ Problemas Comunes
 
-### Error: "Port 3001 already in use"
-Ya hay algo corriendo en el puerto 3001.
+### Error: "Port already in use"
 ```bash
-# Encuentra y mata el proceso
-lsof -ti:3001 | xargs kill -9
-```
+# Encuentra y mata el proceso del puerto 3010
+lsof -ti:3010 | xargs kill -9
 
-### Error: "Port 3000 already in use"
-Ya hay algo corriendo en el puerto 3000.
-```bash
-# Encuentra y mata el proceso
-lsof -ti:3000 | xargs kill -9
+# Encuentra y mata el proceso del puerto 3011
+lsof -ti:3011 | xargs kill -9
 ```
 
 ### No aparece el admin user
@@ -173,8 +126,8 @@ npm run dev         # Reinicia (se crea automáticamente)
 
 ## 📊 Flujo de Trabajo Recomendado
 
-1. ✅ Inicia backend y frontend
-2. ✅ Accede al admin panel
+1. ✅ `npm run dev` - Inicia todo
+2. ✅ Accede al admin panel (http://localhost:3010/admin/login)
 3. ✅ Ve a **Configuración** y personaliza todo
 4. ✅ Sube tu imagen de portada
 5. ✅ Configura la URL del video (YouTube/Vimeo)
@@ -192,18 +145,6 @@ Edita: `frontend/tailwind.config.js`
 
 ### Cambiar textos
 Todo desde el panel de **Configuración** (no necesitas tocar código)
-
-### Cambiar estructura
-- Backend: `backend/src/`
-- Frontend: `frontend/src/`
-
----
-
-## 📞 Soporte
-
-¿Necesitas ayuda? El código está 100% comentado y documentado.
-
-Revisa el **README.md** completo para más información.
 
 ---
 
