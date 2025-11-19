@@ -1,0 +1,16 @@
+{
+  "name": "notorios-crm",
+  "version": "1.0.0",
+  "description": "Landing Page + Mini CRM para Notorios",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:backend && npm run build:frontend"
+  },
+  "keywords": ["crm", "landing-page", "notorios"],
+  "author": "Notorios",
+  "license": "MIT"
+}
