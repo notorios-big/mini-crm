@@ -69,8 +69,8 @@ cp frontend/.env.example frontend/.env
 docker-compose up -d
 
 # La aplicación estará disponible en:
-# Frontend: http://localhost:3000
-# Backend: http://localhost:3001
+# Frontend: http://localhost:3010
+# Backend: http://localhost:3011
 ```
 
 ### Opción 2: Instalación Manual
@@ -124,7 +124,7 @@ npm run preview
 
 ### 1. Acceder al Panel de Administración
 
-1. Visita `http://localhost:3000/admin/login`
+1. Visita `http://localhost:3010/admin/login`
 2. Inicia sesión con las credenciales por defecto
 3. Ve a **Configuración**
 

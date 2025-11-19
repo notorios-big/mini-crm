@@ -21,7 +21,7 @@ import { initializeEmailService, processPendingEmails } from './services/emailSe
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3011;
 
 // Security middleware
 app.use(helmet({

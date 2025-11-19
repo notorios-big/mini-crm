@@ -18,7 +18,7 @@ cd /Users/sam/Desktop/mini-crm
 npm run backend
 ```
 
-✅ El backend correrá en: **http://localhost:3001**
+✅ El backend correrá en: **http://localhost:3011**
 
 ### Paso 3: Iniciar Frontend (Terminal 2 - NUEVA)
 
@@ -29,7 +29,7 @@ cd /Users/sam/Desktop/mini-crm
 npm run frontend
 ```
 
-✅ El frontend correrá en: **http://localhost:3000**
+✅ El frontend correrá en: **http://localhost:3010**
 
 ---
 
@@ -47,7 +47,7 @@ Deberías ver:
 ```
 ╔═══════════════════════════════════════════╗
 ║   🚀 Notorios CRM Backend                ║
-║   Server: http://localhost:3001          ║
+║   Server: http://localhost:3011          ║
 ║   Status: ✓ Running                      ║
 ╚═══════════════════════════════════════════╝
 ✓ Database connected
@@ -66,7 +66,7 @@ Deberías ver:
 ```
   VITE v5.0.11  ready in 500 ms
 
-  ➜  Local:   http://localhost:3000/
+  ➜  Local:   http://localhost:3010/
 ```
 
 ---
@@ -74,7 +74,7 @@ Deberías ver:
 ## 🌐 Acceder al Sistema
 
 ### Landing Page
-👉 **http://localhost:3000**
+👉 **http://localhost:3010**
 
 Prueba el funnel completo:
 1. Click en el botón Play
@@ -83,7 +83,7 @@ Prueba el funnel completo:
 4. Llega a la página de agradecimiento
 
 ### Panel de Administración
-👉 **http://localhost:3000/admin/login**
+👉 **http://localhost:3010/admin/login**
 
 **Credenciales por defecto:**
 - Email: `admin@notorios.com`

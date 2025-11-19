@@ -34,7 +34,7 @@ COPY --from=builder /app/dist ./dist
 RUN mkdir -p /app/uploads
 
 # Expose port
-EXPOSE 3001
+EXPOSE 3011
 
 # Start app
 CMD ["npm", "start"]

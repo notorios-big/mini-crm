@@ -6,12 +6,12 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     ports:
-      - "3001:3001"
+      - "3011:3011"
     environment:
       - NODE_ENV=production
-      - PORT=3001
+      - PORT=3011
       - JWT_SECRET=${JWT_SECRET:-change_this_in_production}
-      - FRONTEND_URL=http://localhost:3000
+      - FRONTEND_URL=http://localhost:3010
     volumes:
       - ./backend/database.sqlite:/app/database.sqlite
       - ./uploads:/app/uploads
@@ -22,7 +22,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "3000:80"
+      - "3010:80"
     depends_on:
       - backend
     restart: unless-stopped
